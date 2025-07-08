@@ -1,0 +1,597 @@
+/* AutoFlow Studio - Component Styles (FAB Tools & Modals) */
+
+/*******************************************/
+/* Tools FAB Styles                        */
+/*******************************************/
+.tools-fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-fab {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+}
+
+.main-fab-icon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+}
+
+/* By default, the main tools icon is visible and the close icon is hidden and rotated. */
+#tools-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+#close-icon {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.8);
+}
+
+/* When the menu is open, fade out the tools icon and fade in the close icon. */
+.tools-fab-container.menu-open #tools-icon {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.8);
+}
+
+.tools-fab-container.menu-open #close-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.tools-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+.tools-fab-container.menu-open .tools-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tool-label {
+    background-color: white;
+    color: #1a1a1a;
+    padding: 6px 14px;
+    border-radius: 15px;
+    margin-right: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover .tool-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tool-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e91e63;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-size: 24px; /* For font-based icons */
+}
+
+.tool-icon-text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.tool-item:hover .tool-icon {
+    transform: scale(1.1);
+    background: #fce4ec;
+}
+
+/*******************************************/
+/* Modal Styles                            */
+/*******************************************/
+.calculator-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.calculator-modal-overlay.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.calculator-modal {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    max-width: 580px;
+    width: 90%;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.calculator-modal-overlay.visible .calculator-modal {
+    transform: scale(1);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f1f5f9;
+    color: #6b7280;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal-btn:hover {
+    background: #e5e7eb;
+    transform: rotate(90deg);
+}
+
+/* Content styling inside modal */
+.calculator-modal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.calculator-modal p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*******************************************/
+/* Pricing Calculator Form Styles          */
+/*******************************************/
+.pricing-calculator-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.pricing-calculator-form .addon-inputs-row {
+    gap: 20px;
+}
+
+.pricing-calculator-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-calculator-form label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+
+.pricing-calculator-form select,
+.pricing-calculator-form input[type="number"] {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.pricing-calculator-form select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23e91e63;stop-opacity:1" /><stop offset="100%" style="stop-color:%239c27b0;stop-opacity:1" /></linearGradient></defs><path d="M5 7.5L10 12.5L15 7.5" stroke="url(%23grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+.addon-inputs-row input[type="number"] {
+    max-width: 200px;
+}
+
+.pricing-calculator-form select:focus,
+.pricing-calculator-form input[type="number"]:focus {
+    outline: none;
+    border-color: #e91e63;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+.addons-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+.form-group-checkbox {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+}
+
+.form-group-checkbox label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #f8fafc;
+    padding: 12px 15px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.form-group-checkbox label:hover {
+    background-color: #f1f5f9;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.form-group-checkbox label::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.form-group-checkbox input:checked + label::before {
+    border-color: #e91e63;
+    background-color: linear-gradient(135deg, #e91e63, #9c27b0);
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 4.5L4.33333 8L11 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+}
+
+/*******************************************/
+/* Result Container Styles                 */
+/*******************************************/
+.result-container {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.result-container h4 {
+    margin: 0 0 8px 0;
+    color: #6b7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.total-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 0.85rem !important;
+    color: #9ca3af !important;
+    max-width: 90% !important;
+    margin: 0 auto 15px auto !important;
+    line-height: 1.5;
+}
+
+.result-container .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+    transform: translateY(0);
+    border: none;
+    cursor: pointer;
+}
+
+.result-container .cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+    background: linear-gradient(135deg, #f91e63, #ac37c0);
+}
+
+/*******************************************/
+/* AI Chatbot Modal Styles                 */
+/*******************************************/
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    min-height: 300px;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border: 2px solid #f1f5f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.message.received p {
+    background: #f1f5f9;
+    color: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 15px 15px 15px 0;
+    max-width: 80%;
+    text-align: left;
+}
+
+.message.sent p {
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0 15px;
+    max-width: 80%;
+    margin-left: auto;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.chat-input-area input:focus {
+    outline: none;
+    border-color: #e91e63;
+}
+
+.chat-input-area button {
+    padding: 12px 20px;
+    border: none;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-input-area button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+/*******************************************/
+/* Mobile Responsive for Components        */
+/*******************************************/
+@media (max-width: 600px) {
+    .pricing-calculator-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tools-fab-container {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    #main-fab {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .tool-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .tool-icon-text {
+        font-size: 18px;
+    }
+    
+    .calculator-modal {
+        max-width: 95%;
+        padding: 15px 20px;
+    }
+    
+    .calculator-modal h2 {
+        font-size: 1.5rem;
+    }
+    
+    .total-price {
+        font-size: 2rem;
+    }
+    
+    .chat-container {
+        height: 40vh;
+        min-height: 250px;
+    }
+}
+
+/*******************************************/
+/* Animation Enhancements                  */
+/*******************************************/
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tools-fab-container.menu-open .tool-item:nth-child(1) {
+    animation: bounceIn 0.3s ease 0.1s backwards;
+}
+
+.tools-fab-container.menu-open .tool-item:nth-child(2) {
+    animation: bounceIn 0.3s ease 0.2s backwards;
+}
+
+#main-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(233, 30, 99, 0.4);
+}
+
+.tool-item {
+    will-change: transform;
+}
+
+.calculator-modal,
+.calculator-modal-overlay {
+    will-change: opacity, transform;
+}
+
+/*******************************************/
+/* Accessibility Improvements              */
+/*******************************************/
+.tool-item:focus-visible,
+#main-fab:focus-visible,
+.close-modal-btn:focus-visible {
+    outline: 2px solid #e91e63;
+    outline-offset: 2px;
+}
+
+.pricing-calculator-form input:focus-visible,
+.pricing-calculator-form select:focus-visible {
+    outline: 2px solid #e91e63;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .tool-icon {
+        border: 2px solid #1a1a1a;
+    }
+    
+    .calculator-modal {
+        border: 2px solid #1a1a1a;
+    }
+    
+    .pricing-calculator-form select,
+    .pricing-calculator-form input[type="number"] {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .tools-fab-container,
+    .tools-menu,
+    .tool-item,
+    .calculator-modal-overlay,
+    .calculator-modal {
+        transition: none;
+    }
+    
+    .tools-fab-container.menu-open .tool-item {
+        animation: none;
+    }
+}
