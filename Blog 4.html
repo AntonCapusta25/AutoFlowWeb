@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapier is Great, Until It Isn't: 5 Signs Your Business Has Outgrown No-Code Tools - AutoFlow Studio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/cookies-banner.css">
+    <script src="js/gsap.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo" id="loadingLogo">AutoFlow Studio</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AutoFlow Studio</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <div class="hero-background">
+            <div class="abstract-element sphere-1"></div>
+            <div class="abstract-element sphere-2"></div>
+            <div class="geometric-shapes">
+                <div class="dots-pattern"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>AutoFlow Studio Blog</h1>
+            <p>Insights, tips, and strategies to automate your business and boost productivity</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-container">
+        <article class="blog-article">
+            <header class="article-header">
+                <div class="category-badge">Business Growth</div>
+                <h1 class="article-title">Zapier is Great, Until It Isn't: 5 Signs Your Business Has Outgrown No-Code Tools</h1>
+                <p class="article-subtitle">Recognize when your growing business needs to graduate from no-code limitations to custom automation solutions that truly scale.</p>
+                <div class="article-meta">
+                    <div class="author">
+                        <div class="author-avatar">AF</div>
+                        <span>AutoFlow Studio</span>
+                    </div>
+                    <span>•</span>
+                    <span>January 22, 2025</span>
+                    <span>•</span>
+                    <span>12 min read</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="hero-image">
+                    [Hero Image: Evolution from Simple to Complex Automation Systems]
+                </div>
+
+                <p>Let's start with a clear and honest statement: <strong>Zapier is a fantastic tool</strong>. Along with other no-code platforms like Make.com, it has revolutionized how small businesses operate. These tools are like the first employee you ever hired—a multi-talented generalist who single-handedly took a mountain of manual work off your plate. They democratized automation, allowing non-technical founders to connect their apps and build simple workflows without writing a single line of code.</p>
+
+                <p>For a time, it was perfect. You connected your contact form to your CRM. You automated your social media posts. You created simple, A-to-B workflows that saved you hours every week.</p>
+
+                <p>But lately, you've started to notice some friction. The simple tasks have evolved into complex, mission-critical processes. The workarounds are getting more complicated. Your trusty no-code tool, once a source of relief, is now starting to feel like a bottleneck.</p>
+
+                <p>If this sounds familiar, you are not alone. This is a natural and positive stage in a company's growth. It means your business is becoming more sophisticated. This guide will help you self-diagnose your automation pain by outlining five clear signs that you've outgrown no-code tools and are ready for a more powerful, scalable solution.</p>
+
+                <h2>Sign #1: Your Monthly Bill is Shocking (And Unpredictable)</h2>
+                
+                <div class="results-box">
+                    <h3>💸 The Symptom</h3>
+                    <p>You open your monthly invoice from Zapier and your jaw tightens. It's hundreds, maybe even thousands of dollars. You find yourself constantly thinking about "task usage." You're hesitant to build new workflows, not because they wouldn't be useful, but because you're worried about the cost. You're spending time "optimizing for tasks" instead of optimizing your business.</p>
+                </div>
+
+                <p><strong>The Root Cause:</strong> This pain is built directly into the pricing model of most no-code platforms. They charge you per "task." But what counts as a task is often misunderstood. It's not just the final action. Every single step in your Zap—every filter, every formatter, every check it performs—burns through your task allowance. A single, complex workflow that needs to run frequently can consume tens of thousands of tasks, causing your bill to skyrocket.</p>
+
+                <div class="highlight-box">
+                    <h3>✅ The Cure (A Custom Solution)</h3>
+                    <p>When you move to a custom automation solution, you break free from the task-based pricing model. Instead of paying for every action, you pay for the computing resources you use. A custom script, running on a predictable cloud platform (like AWS, Google Cloud, or Azure), can execute millions of steps for a fraction of the cost. The pricing is stable, predictable, and doesn't punish you for creating more sophisticated or high-volume workflows. It's the difference between paying a taxi by the minute versus leasing your own car—for a daily commuter, the lease is always more economical and efficient.</p>
+                </div>
+
+                <h2>Sign #2: You're Building "Zaps that Zap Zaps"</h2>
+                
+                <div class="results-box">
+                    <h3>🕸️ The Symptom</h3>
+                    <p>Your automation setup looks like a Rube Goldberg machine. You have one Zap that triggers a second Zap, which in turn updates a spreadsheet to trigger a third Zap. It's a fragile, confusing web of interconnected workflows. When one part breaks, the entire chain reaction fails, and spending hours trying to find the single point of failure becomes a regular, frustrating exercise.</p>
+                </div>
+
+                <p><strong>The Root Cause:</strong> No-code tools are fundamentally linear. They are designed for simple "If This, Then That" logic. They are not built to handle complex business processes that require conditional branching ("If A and B are true, but not C, then do D, otherwise do E"), loops, or sophisticated error handling. You are trying to build a complex engine using only the most basic building blocks.</p>
+
+                <div class="highlight-box">
+                    <h3>✅ The Cure</h3>
+                    <p>This is precisely what custom-coded solutions are built for. A single, elegant script can replace a dozen fragile Zaps. It can contain all the complex logic, conditional paths, and robust error handling your business actually needs. For example, if a step fails, it can automatically retry three times and then send a specific alert to your IT team, rather than just shutting down. It's a resilient, centralized, and transparent system, not a house of cards.</p>
+                </div>
+
+                <h2>Sign #3: The App You Need Isn't Supported (Or the Integration is Too Basic)</h2>
+                
+                <div class="results-box">
+                    <h3>🔌 The Symptom</h3>
+                    <p>You're excited to use a new, industry-specific piece of software—perhaps a specialized Dutch accounting platform or a bespoke inventory management system. You go to Zapier to connect it to your other tools and... nothing. It's not on the list. Or, worse, it is on the list, but the integration is disappointingly basic. It only offers one or two triggers and actions, and you need to access a deeper, more advanced feature of the software.</p>
+                </div>
+
+                <p><strong>The Root Cause:</strong> Zapier's library of 6,000+ apps is impressive, but it's a mile wide and often an inch deep. They build connectors for the most common use cases of the most popular apps. They simply can't create and maintain deep, feature-rich integrations for every single application on the market. They are limited by their pre-built menu.</p>
+
+                <div class="highlight-box">
+                    <h3>✅ The Cure</h3>
+                    <p>A custom solution doesn't use a menu; it speaks the language of the internet: APIs (Application Programming Interfaces). As long as a piece of software has an API—even a quirky, poorly documented, or complex one—a skilled developer can build a direct bridge to it. You can access any feature the API exposes. You are no longer limited by what Zapier thinks you should do; you can build an integration that does exactly what you need it to do. This makes it a true <strong>Zapier alternative</strong> for businesses with unique software needs.</p>
+                </div>
+
+                <h2>Sign #4: You're Worried About Data Security, Control, and Compliance</h2>
+                
+                <div class="results-box">
+                    <h3>🛡️ The Symptom</h3>
+                    <p>Your business is growing, and you're handling more sensitive information—personal client data, financial records, or proprietary intellectual property. You start to feel uneasy about all this critical data passing through a third-party, US-based service, especially with strict regulations like GDPR in the Netherlands and across Europe. You need more control over where your data is stored and processed.</p>
+                </div>
+
+                <p><strong>The Root Cause:</strong> No-code platforms are multi-tenant services. Your data is processed and logged on their servers, alongside the data of thousands of other companies. While they have excellent security measures, you are ultimately a guest in their house, subject to their policies, their infrastructure, and their jurisdiction.</p>
+
+                <div class="highlight-box">
+                    <h3>✅ The Cure</h3>
+                    <p>A custom solution gives you the keys to your own house. It can be designed to run in your own private cloud environment, giving you complete sovereignty over your data. You can dictate the exact security protocols, ensure data never leaves the EU, and create detailed audit logs that meet the strictest compliance standards. For businesses in finance, healthcare, or legal sectors, this level of control isn't just a preference; it's a requirement.</p>
+                </div>
+
+                <h2>Sign #5: You Need Real-Time Speed and Performance</h2>
+                
+                <div class="results-box">
+                    <h3>⚡ The Symptom</h3>
+                    <p>You notice a lag. A new lead comes in, but it takes 5-15 minutes for them to appear in your CRM. An order is placed, but the fulfillment team doesn't get the notification for several minutes. In a world of instant gratification, these delays can mean the difference between a happy customer and a lost sale.</p>
+                </div>
+
+                <p><strong>The Root Cause:</strong> To manage their massive server load, most of Zapier's plans run on a "polling" interval. This means the system "checks" for new data every 1 to 15 minutes. It isn't constantly watching. For many tasks this is fine, but for mission-critical, time-sensitive operations, it's unacceptably slow.</p>
+
+                <div class="highlight-box">
+                    <h3>✅ The Cure</h3>
+                    <p>Custom automations are built for speed. They can be architected to use "webhooks," which are instant notification systems. The moment an event happens, the data is pushed to your workflow in real-time—milliseconds, not minutes. Furthermore, a custom solution can be optimized for raw performance, processing huge volumes of data far faster than a general-purpose platform ever could.</p>
+                </div>
+
+                <h2>Outgrowing Zapier is a Sign of Success</h2>
+
+                <p>If you're nodding along to two or more of these signs, don't be frustrated. You should be proud. It means your business is maturing. Your processes are becoming more sophisticated, your volume is increasing, and your needs are evolving beyond what simple tools were ever designed to handle.</p>
+
+                <p>You've successfully climbed the first mountain of automation. Now, you're standing at the base of a much bigger one, but the view from the top is infinitely better. It's time to start thinking like an enterprise and build the professional-grade infrastructure to match your ambition.</p>
+
+                <div class="highlight-box">
+                    <h3>🤔 Over to You</h3>
+                    <p><strong>Which of these five signs is causing you the most friction in your business right now?</strong></p>
+                    <p>Ready to build an automation engine that can truly scale with your vision?</p>
+                    <p>If you're tired of paying too much for fragile workflows that can't keep up with your business, it's time to explore a real alternative. We specialize in helping businesses like yours migrate from the limitations of no-code tools to powerful, scalable, and cost-effective custom automation solutions.</p>
+                    <p>We invite you to a free, no-obligation "Zapier Strategy Session." In this 20-minute call, we'll review your existing workflows, diagnose your key pain points, and show you what a more robust and efficient custom solution would look like for your business.</p>
+                </div>
+
+                <div class="tag-list">
+                    <span class="tag">Zapier Alternative</span>
+                    <span class="tag">No-Code Limitations</span>
+                    <span class="tag">Custom Automation</span>
+                    <span class="tag">Business Growth</span>
+                    <span class="tag">Scaling</span>
+                    <span class="tag">Enterprise Solutions</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Call to Action -->
+        <section class="blog-cta-section">
+            <div class="container">
+                <h2>Ready to Graduate Beyond No-Code Limitations?</h2>
+                <p>Stop paying premium prices for basic workflows that break when you need them most. Let's architect a custom automation solution that scales with your ambitious growth plans.</p>
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" class="cta-button">Book Your Free Zapier Strategy Session</a>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <div class="container">
+                <h2 class="section-title">Related Articles</h2>
+                <p class="section-subtitle">Discover more ways to automate your business and boost productivity</p>
+                
+                <div class="related-articles-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            🏗️
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Business Strategy</span>
+                            </div>
+                            <h3>What is Business Process Automation (BPA)? A Plain-English Guide for Non-Technical Founders</h3>
+                            <p>Transform your growing business from chaotic plate-spinning into a streamlined, scalable operation with this founder-friendly introduction to BPA.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">January 20, 2025</span>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            ⚡
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Productivity</span>
+                            </div>
+                            <h3>10 Repetitive Tasks Costing Your Business Time and Money (And How to Automate Them)</h3>
+                            <p>Discover the silent productivity killers in your daily routine and learn how automation can eliminate them forever.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">January 18, 2025</span>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            🚀
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Getting Started</span>
+                            </div>
+                            <h3>The Ultimate Guide for Dutch SMEs: How to Start Automating Your Business in 5 Simple Steps</h3>
+                            <p>A simple, no-jargon roadmap to help you reclaim your time and free you up to focus on what truly matters for your business growth.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">January 15, 2025</span>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <!-- Company Branding -->
+        <div class="footer-branding">
+            <h3>AutoFlow Studio</h3>
+            <p class="footer-description">
+                Building automation solutions that save time and eliminate manual work. Connect with us and stay updated on the latest automation insights.
+            </p>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social-section">
+            <h4>Follow Us</h4>
+            <div class="footer-social-links">
+                <a href="https://www.instagram.com/auto.flow25" class="footer-social-link" title="Instagram" target="_blank">
+                    <img src="https://i.ibb.co/67KTsBBp/instagram-1384015.png" alt="Instagram">
+                </a>
+                <a href="#" class="footer-social-link" title="TikTok" target="_blank">
+                    <img src="https://i.ibb.co/LzmHMXNb/tiktok-3116491.png" alt="TikTok">
+                </a>
+                <a href="#" class="footer-social-link" title="YouTube" target="_blank">
+                    <img src="https://i.ibb.co/9jbRt6k/youtube-1384012.png" alt="YouTube">
+                </a>
+                <a href="#" class="footer-social-link" title="LinkedIn" target="_blank">
+                    <img src="https://i.ibb.co/RknLHqpx/linkedin-1384014.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="footer-navigation">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 AutoFlow Studio. All rights reserved. | autoflowcompany2025@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+   <!-- Tools FAB -->
+    <div id="tools-fab-container" class="tools-fab-container">
+        <div id="tools-menu" class="tools-menu">
+            <div class="tool-item" id="open-calculator-btn">
+                <div class="tool-label">Price Calculator</div>
+                <div class="tool-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="12" y1="10" x2="12" y2="18"></line><line x1="8" y1="14" x2="16" y2="14"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="tool-item" id="open-chatbot-btn">
+                <div class="tool-label">AI Assistant</div>
+                <div class="tool-icon tool-icon-text">
+                    Ai
+                </div>
+            </div>
+        </div>
+        <div id="main-fab" class="fab-icon">
+            <svg id="tools-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+               <line x1="12" y1="19" x2="12" y2="19.01"></line>
+            </svg>
+            
+            <svg id="close-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M18 6l-12 12"></path>
+               <path d="M6 6l12 12"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Calculator Modal -->
+    <div id="calculator-modal-overlay" class="calculator-modal-overlay">
+        <div id="calculator-modal" class="calculator-modal">
+            
+            <!-- Close Button -->
+            <button id="close-calculator-modal-btn" class="close-modal-btn">&times;</button>
+            
+            <h2 style="font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; text-align: center; padding: 0 15px;">Automation Price Estimator</h2>
+            
+            <p style="color: #6b7280; font-size: 0.85rem; text-align: center; margin: 0 auto 25px auto; line-height: 1.4; max-width: 450px; padding: 0 15px;">Select your options to get a real-time price estimate for your custom automation project.</p>
+
+            <form id="pricing-calculator-form" class="pricing-calculator-form">
+                <!-- Two column layout for main options -->
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Team Size</label>
+                        <div class="custom-select">
+                            <select id="team-size" name="team-size">
+                                <option value="solo">Small (1-5 people)</option>
+                                <option value="growing">Medium (6-25 people)</option>
+                                <option value="established">Large (26-99 people)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Number of Tasks
+                            <span class="tasks-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>What counts as one task?</strong><br><br>
+                                    • <strong>One automation workflow</strong> that solves a specific business problem<br><br>
+                                    • Examples: "Send email when form submitted", "Update spreadsheet when sale made", "Create calendar event from email"<br><br>
+                                    • Each separate automation = 1 task
+                                </div>
+                            </span>
+                        </label>
+                        <input type="number" id="num-tasks" name="num-tasks" value="1" min="1" max="10" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 0.9rem; background: #f8fafc; color: #374151;">
+                    </div>
+                </div>
+                
+                <!-- Add-ons section -->
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin: 0 0 15px 0;">Add-ons</h3>
+                
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Task Complexity
+                            <span class="complexity-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>Simple Syncs (€100 per task):</strong> Basic data transfer between two apps (e.g., Gmail to Google Sheets).<br><br>
+                                    <strong>Smart Workflows (€250 per task):</strong> Involves AI, data processing, or conditional logic.<br><br>
+                                    <strong>Advanced Solutions (€400 per task):</strong> Involves web scraping, custom API integrations, or complex data manipulation.
+                                </div>
+                            </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="task-complexity" name="task-complexity">
+                                <option value="simple">Simple Syncs</option>
+                                <option value="smart">Smart Workflows</option>
+                                <option value="advanced">Advanced Solutions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Management Controls</label>
+                        <div class="custom-select">
+                            <select id="management-option" name="management-option">
+                                <option value="background">None (runs automatically)</option>
+                                <option value="sheets-controls">Google Sheets dashboard</option>
+                                <option value="custom-dashboard">Custom dashboard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Support Checkbox -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display: flex; align-items: center; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; cursor: pointer;">
+                        <input type="checkbox" id="support-plan" name="support-plan" style="width: 18px; height: 18px; margin-right: 10px; accent-color: #e91e63;">
+                        Monthly support
+                    </label>
+                </div>
+            </form>
+
+            <!-- Results Section -->
+            <div class="mobile-results" style="background: linear-gradient(135deg, #fce4ec, #f3e5f5); padding: 15px; border-radius: 15px; text-align: center;">
+                <div style="color: #9ca3af; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED TOTAL</div>
+                
+                <div id="one-time-price" class="mobile-price" style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #e91e63, #9c27b0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; line-height: 1;">€100</div>
+                
+                <div style="color: #6b7280; font-size: 0.8rem; margin-bottom: 6px;">(One-Time Project Cost)</div>
+                
+                <!-- Monthly price (hidden by default) -->
+                <div id="monthly-price-container" style="display: none; margin-bottom: 12px;">
+                    <div style="font-size: 1rem; color: #6b7280; margin: 6px 0;">+</div>
+                    <div id="monthly-price" style="font-size: 1.5rem; font-weight: bold; color: #e91e63; margin-bottom: 3px;">€50 / month</div>
+                    <div style="color: #6b7280; font-size: 0.8rem;">(Monthly Support Plan)</div>
+                </div>
+                
+                <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.4; margin: 0 0 15px 0; max-width: 350px; margin-left: auto; margin-right: auto; padding: 0 8px;">This is a rough approximation. The final price may increase or decrease based on your specific requirements.</p>
+                
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" id="proceed-button" style="display: inline-block; background: linear-gradient(135deg, #e91e63, #9c27b0); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3); border: none; cursor: pointer; max-width: 100%; box-sizing: border-box;">Schedule a free consultation</a>
+            </div>
+        </div>
+    </div>
+
+       <!-- AI Chat Bot Modal -->
+<div id="chatbot-modal-overlay" class="chat-modal-overlay">
+    <div id="chatbot-modal" class="chat-modal">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-bot-avatar">🤖</div>
+                <div class="chat-header-text">
+                    <h3>AI Assistant</h3>
+                    <p>AutoFlow Studio Bot</p>
+                </div>
+            </div>
+            <button id="close-chatbot-modal-btn" class="chat-close-btn">&times;</button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages">
+                <div class="message received">
+                    <p>Hello! How can I help you with your automation needs today?</p>
+                </div>
+            </div>
+            
+            <!-- Chat Input Area with SINGLE attachment button -->
+            <div class="chat-input-area">
+                <button id="chat-upload-btn" title="Upload file">📎</button>
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message...">
+                </div>
+                <button class="chat-send-btn" title="Send message">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/cookies-banner.js"></script>
+</body>
+</html>

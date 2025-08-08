@@ -1,0 +1,1674 @@
+/* AutoFlow Studio - Complete Enhanced Component Styles */
+
+/*******************************************/
+/* Tools FAB Styles                        */
+/*******************************************/
+
+/* Base FAB Container */
+.tools-fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main FAB Button */
+#main-fab {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001;
+    border: none;
+}
+
+#main-fab:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(233, 30, 99, 0.4);
+}
+
+/* FAB Icon Transitions */
+.main-fab-icon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+}
+
+#tools-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+#close-icon {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.8);
+}
+
+.tools-fab-container.menu-open #tools-icon {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.8);
+}
+
+.tools-fab-container.menu-open #close-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Tools Menu */
+.tools-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+.tools-fab-container.menu-open .tools-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+/* Tool Items */
+.tool-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tool-label {
+    background-color: white;
+    color: #1a1a1a;
+    padding: 6px 14px;
+    border-radius: 15px;
+    margin-right: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.tool-item:hover .tool-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tool-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e91e63;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    font-size: 24px;
+}
+
+.tool-icon-text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.tool-item:hover .tool-icon {
+    transform: scale(1.1);
+    background: #fce4ec;
+}
+
+/* Animations */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tools-fab-container.menu-open .tool-item:nth-child(1) {
+    animation: slideUp 0.3s ease 0.1s backwards;
+}
+
+.tools-fab-container.menu-open .tool-item:nth-child(2) {
+    animation: slideUp 0.3s ease 0.2s backwards;
+}
+
+/*******************************************/
+/* Modal Overlay Base Styles               */
+/*******************************************/
+.calculator-modal-overlay,
+.chat-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 9998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.calculator-modal-overlay.visible,
+.chat-modal-overlay.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.calculator-modal,
+.chat-modal {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    transform: scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.calculator-modal-overlay.visible .calculator-modal,
+.chat-modal-overlay.visible .chat-modal {
+    transform: scale(1);
+}
+
+/*******************************************/
+/* Calculator Modal Specific Styles        */
+/*******************************************/
+.calculator-modal {
+    padding: 25px;
+    max-width: 580px;
+    width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.calculator-modal h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.calculator-modal > p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+/* Calculator Content - Scrollable */
+.calculator-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+    min-height: 0;
+}
+
+.calculator-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.calculator-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.calculator-content::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+
+.calculator-content::-webkit-scrollbar-thumb:hover {
+    background: #d1d5db;
+}
+
+/* Close Button */
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f1f5f9;
+    color: #6b7280;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal-btn:hover {
+    background: #e5e7eb;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.close-modal-btn:active {
+    transform: scale(0.95);
+}
+
+/*******************************************/
+/* Custom Form Elements                     */
+/*******************************************/
+
+/* Custom Select Dropdowns */
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-select select {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: #f8fafc;
+    color: #374151;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+.custom-select select:focus {
+    outline: none;
+    border-color: #e91e63;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+/* Tooltip Styles */
+.tooltip-icon {
+    margin-left: 6px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: #e91e63;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    font-size: 0.75rem;
+    cursor: help;
+    position: relative;
+}
+
+.tooltip-content {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a1a;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    white-space: normal;
+}
+
+.tooltip-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #1a1a1a;
+}
+
+.complexity-tooltip:hover .tooltip-content,
+.tasks-tooltip:hover .tooltip-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Fixed Chat Modal Styles - Replace the existing chat modal section */
+
+/*******************************************/
+/* Enhanced AI Chatbot Modal Styles        */
+/*******************************************/
+.chat-modal {
+    width: 420px;
+    height: 500px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Ensure the modal maintains its size */
+    min-height: 400px;
+}
+
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.chat-header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chat-bot-avatar {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.chat-header-text h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.chat-header-text p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.chat-close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+/* Status Indicator */
+.agent-status-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #10b981;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Chat Container - Fixed Layout */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0; /* Critical: allows flex child to shrink below content size */
+    overflow: hidden;
+}
+
+/* Chat Messages - Fixed Scrolling */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Remove min-height to prevent expansion */
+    min-height: 0;
+    /* Ensure proper scrolling behavior */
+    height: 0; /* Forces flex to calculate proper height */
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #e5e7eb;
+    border-radius: 2px;
+}
+
+/* Message Styles */
+.message {
+    display: flex;
+    animation: messageSlideIn 0.3s ease-out;
+    flex-shrink: 0; /* Prevent messages from shrinking */
+}
+
+@keyframes messageSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message.system {
+    justify-content: center;
+}
+
+.message.system p {
+    background: rgba(107, 114, 128, 0.1);
+    color: #6b7280;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+.message.received {
+    justify-content: flex-start;
+}
+
+.message.received p {
+    background: white;
+    color: #1a1a1a;
+    border-radius: 18px 18px 18px 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+}
+
+.message.sent {
+    justify-content: flex-end;
+}
+
+.message.sent p {
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    border-radius: 18px 18px 6px 18px;
+    box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+}
+
+.message p {
+    max-width: 75%;
+    padding: 12px 16px;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    /* Ensure text wraps properly and doesn't expand container */
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 18px 18px 18px 6px;
+    max-width: 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f1f5f9;
+    flex-shrink: 0;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 3px;
+}
+
+.typing-dots span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6b7280;
+    animation: typing-bounce 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-bounce {
+    0%, 60%, 100% { 
+        transform: translateY(0); 
+        opacity: 0.7;
+    }
+    30% { 
+        transform: translateY(-6px); 
+        opacity: 1;
+    }
+}
+
+/* Chat Input Area - Fixed Height */
+.chat-input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #f1f5f9;
+    flex-shrink: 0;
+    height: 75px;
+    box-sizing: border-box;
+    min-height: 75px; /* Ensure consistent height */
+}
+
+#chat-upload-btn {
+    background: #f1f5f9;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+}
+
+#chat-upload-btn:hover {
+    background: #e5e7eb;
+    color: #e91e63;
+}
+
+.chat-input-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.chat-input-area input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #f8fafc;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.chat-input-area input:focus {
+    border-color: #e91e63;
+    background: white;
+}
+
+.chat-input-area input::placeholder {
+    color: #9ca3af;
+}
+
+.chat-send-btn {
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    font-size: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-send-btn * {
+    display: none;
+}
+
+.chat-send-btn::before {
+    content: "➤";
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-indent: 0;
+    display: block;
+}
+
+.chat-send-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+}
+
+/* Quick Reply Buttons - Fixed Height */
+.quick-replies {
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    overflow-y: auto;
+    flex-shrink: 0;
+    min-height: 60px;
+    max-height: 60px;
+    box-sizing: border-box;
+}
+
+.quick-reply-btn {
+    background: white;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.quick-reply-btn:hover {
+    border-color: #e91e63;
+    color: #e91e63;
+    background: #fce4ec;
+}
+
+/* File Message Styles */
+.file-message {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 8px 0;
+    max-width: 250px;
+    flex-shrink: 0;
+}
+
+.file-message img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.file-message img:hover {
+    transform: scale(1.02);
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.file-icon {
+    font-size: 20px;
+    color: #6b7280;
+}
+
+.file-details {
+    flex-grow: 1;
+}
+
+.file-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.file-size {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.file-upload-progress {
+    width: 100%;
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 8px 0;
+}
+
+.file-upload-progress-bar {
+    height: 100%;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/*******************************************/
+/* Pricing Calculator Form Styles          */
+/*******************************************/
+
+/* Form sections */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section h3 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-subtitle {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Team size options */
+.team-size-options,
+.complexity-options,
+.management-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.team-size-option,
+.complexity-option,
+.management-option {
+    position: relative;
+    cursor: pointer;
+}
+
+.team-size-option input[type="radio"],
+.complexity-option input[type="radio"],
+.management-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.option-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.option-card:hover {
+    border-color: #e91e63;
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.15);
+}
+
+.team-size-option input[type="radio"]:checked + .option-card,
+.complexity-option input[type="radio"]:checked + .option-card,
+.management-option input[type="radio"]:checked + .option-card {
+    border-color: #e91e63;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+}
+
+.option-header {
+    margin-bottom: 10px;
+}
+
+.option-header strong {
+    display: block;
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.option-size,
+.option-price {
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.option-description {
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.option-pricing {
+    color: #e91e63;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+/* Task counter */
+.task-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.counter-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #e5e7eb;
+    border-radius: 50%;
+    background: white;
+    color: #e91e63;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-btn:hover {
+    border-color: #e91e63;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    transform: scale(1.05);
+}
+
+.counter-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#num-tasks {
+    width: 80px;
+    height: 50px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    background: white;
+}
+
+/* Enhanced checkbox styling */
+.form-group-checkbox {
+    margin: 20px 0;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    accent-color: #e91e63;
+}
+
+.form-group-checkbox label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s ease;
+    gap: 12px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.form-group-checkbox label:hover {
+    border-color: #e91e63;
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.15);
+}
+
+.form-group-checkbox input[type="checkbox"]:checked + label,
+.form-group-checkbox label:has(input[type="checkbox"]:checked) {
+    border-color: #e91e63;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+}
+
+.form-group-checkbox label .option-description {
+    display: block;
+    margin: 5px 0;
+    color: #6b7280;
+    font-weight: normal;
+}
+
+.form-group-checkbox label .option-price {
+    display: block;
+    color: #e91e63;
+    font-weight: 600;
+}
+
+/* Legacy form styles */
+.pricing-calculator-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.pricing-calculator-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-calculator-form label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+
+.pricing-calculator-form select,
+.pricing-calculator-form input[type="number"] {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.pricing-calculator-form select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23e91e63;stop-opacity:1" /><stop offset="100%" style="stop-color:%239c27b0;stop-opacity:1" /></linearGradient></defs><path d="M5 7.5L10 12.5L15 7.5" stroke="url(%23grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+.pricing-calculator-form select:focus,
+.pricing-calculator-form input[type="number"]:focus {
+    outline: none;
+    border-color: #e91e63;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1);
+}
+
+.addons-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 8px;
+}
+
+/*******************************************/
+/* Result Container Styles                 */
+/*******************************************/
+.result-container {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.result-container h4 {
+    margin: 0 0 8px 0;
+    color: #6b7280;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.total-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+    line-height: 1.5;
+}
+
+.result-container .cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #e91e63, #9c27b0);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+    transform: translateY(0);
+    border: none;
+    cursor: pointer;
+}
+
+.result-container .cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+    background: linear-gradient(135deg, #f91e63, #ac37c0);
+}
+
+/* Dual pricing display */
+.price-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.price-item {
+    text-align: center;
+}
+
+.price-amount {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.price-label {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.price-plus {
+    font-size: 2rem;
+    color: #6b7280;
+    margin: 0 10px;
+    align-self: center;
+}
+
+.monthly .price-amount {
+    font-size: 2rem;
+}
+
+/*******************************************/
+/* Newsletter Form Mobile Fix              */
+/*******************************************/
+@media (max-width: 768px) {
+    .section div[style*="display: flex"] {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    
+    .section div[style*="display: flex"] input[type="email"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .section div[style*="display: flex"] .cta-button {
+        width: 100% !important;
+        max-width: 250px !important;
+        margin: 0 auto !important;
+    }
+}
+
+/* Blog cards mobile spacing fix */
+@media (max-width: 768px) {
+    .blog-grid {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .blog-card {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .blog-content {
+        padding: 30px 20px !important;
+    }
+    
+    .section .container {
+        padding: 0 15px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section .container {
+        padding: 0 10px !important;
+    }
+    
+    .blog-content {
+        padding: 25px 15px !important;
+    }
+}
+
+/*******************************************/
+/* Mobile Responsive Styles                */
+/*******************************************/
+@media (max-width: 768px) {
+    /* FAB Mobile Positioning */
+    .tools-fab-container {
+        bottom: 20px;
+        right: 15px;
+        align-items: flex-end;
+    }
+    
+    .tools-menu {
+        align-items: flex-end;
+        margin-bottom: 15px;
+    }
+    
+    .tool-item {
+        justify-content: flex-end;
+        width: 100%;
+    }
+    
+    .tool-label {
+        margin-right: 12px;
+        margin-left: 0;
+    }
+    
+    #main-fab {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .tool-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .tool-icon-text {
+        font-size: 18px;
+    }
+    
+    /* Calculator Modal Mobile */
+    .calculator-modal {
+        margin: 8px;
+        padding: 15px;
+        max-height: 70vh;
+        overflow-y: auto;
+        width: calc(100% - 16px);
+        max-width: none;
+        position: relative;
+    }
+    
+    .calculator-modal h2 {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        padding: 0 8px;
+    }
+    
+    .close-modal-btn {
+        top: 8px;
+        right: 8px;
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
+    }
+    
+    /* Mobile grid layout */
+    .mobile-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .mobile-grid input, 
+    .mobile-grid select {
+        padding: 10px;
+        font-size: 16px; /* Prevents zoom on iOS */
+        min-height: 40px; /* Better touch targets */
+    }
+    
+    .mobile-grid label {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+    }
+    
+    /* Mobile results styling */
+    .mobile-price {
+        font-size: 2rem;
+    }
+    
+    .mobile-results {
+        padding: 12px;
+    }
+    
+    .mobile-results a {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        width: auto;
+        min-height: 40px;
+    }
+    
+    .mobile-results input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Mobile tooltip adjustments */
+    .tooltip-content {
+        width: 260px;
+        font-size: 0.75rem;
+        padding: 10px;
+    }
+    
+    /* Form adjustments */
+    form {
+        margin-bottom: 20px;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+    
+    /* Chat Modal Mobile */
+    .chat-modal {
+        width: 380px;
+        max-height: 85vh;
+        max-width: calc(100vw - 20px);
+        margin: 10px;
+    }
+    
+    .chat-messages {
+        min-height: 200px;
+        padding: 15px;
+        gap: 12px;
+    }
+    
+    .chat-header {
+        padding: 15px 20px;
+    }
+    
+    .chat-bot-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .chat-header-text h3 {
+        font-size: 1rem;
+    }
+    
+    .chat-input-area {
+        padding: 15px;
+        gap: 10px;
+    }
+    
+    #chat-upload-btn,
+    .chat-send-btn {
+        width: 42px;
+        height: 42px;
+    }
+    
+    .chat-send-btn::before {
+        font-size: 14px;
+    }
+    
+    .chat-input-area input {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .quick-replies {
+        padding: 12px 15px;
+        gap: 6px;
+    }
+    
+    /* Form Elements Mobile */
+    .team-size-options,
+    .complexity-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-counter {
+        gap: 15px;
+    }
+    
+    .counter-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    #num-tasks {
+        width: 70px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    
+    .pricing-calculator-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .price-display {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .price-plus {
+        margin: 10px 0;
+    }
+    
+    .price-amount {
+        font-size: 2.5rem;
+    }
+    
+    .monthly .price-amount {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .tools-fab-container {
+        bottom: 15px;
+        right: 10px;
+    }
+    
+    #main-fab {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .tool-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .tool-icon-text {
+        font-size: 16px;
+    }
+    
+    .tool-label {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+    
+    .calculator-modal {
+        margin: 5px;
+        padding: 12px;
+        width: calc(100% - 10px);
+    }
+    
+    .calculator-modal h2 {
+        font-size: 1.4rem;
+        padding: 0 5px;
+        margin-bottom: 10px;
+    }
+    
+    .mobile-price {
+        font-size: 1.8rem;
+    }
+    
+    .tooltip-content {
+        width: 220px;
+        left: -90px;
+        font-size: 0.7rem;
+        padding: 8px;
+    }
+    
+    .mobile-results a {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+    
+    .mobile-grid input, 
+    .mobile-grid select {
+        padding: 8px;
+        font-size: 15px;
+    }
+    
+    .mobile-grid label {
+        font-size: 0.85rem;
+    }
+    
+    p {
+        font-size: 0.8rem;
+    }
+    
+    .chat-modal {
+        width: 340px;
+        max-height: 80vh;
+        max-width: calc(100vw - 16px);
+        margin: 8px;
+    }
+
+    .chat-messages {
+        min-height: 150px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .chat-input-area {
+        padding: 12px;
+        gap: 8px;
+        height: 65px;
+    }
+
+    #chat-upload-btn,
+    .chat-send-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .chat-send-btn::before {
+        font-size: 12px;
+    }
+
+    .chat-input-area input {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .option-card {
+        padding: 15px;
+    }
+    
+    .form-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    .total-price {
+        font-size: 2rem;
+    }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .tool-label {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    #main-fab:active {
+        transform: scale(0.95);
+    }
+    
+    .close-modal-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+    
+    .close-modal-btn:active {
+        background: rgba(107, 114, 128, 0.2);
+    }
+    
+    .complexity-tooltip {
+        cursor: pointer;
+    }
+    
+    .complexity-tooltip:active .tooltip-content {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .mobile-grid input, 
+    .mobile-grid select {
+        min-height: 36px;
+    }
+}
+
+/*******************************************/
+/* Accessibility & Polish                  */
+/*******************************************/
+.tool-item:focus-visible,
+#main-fab:focus-visible,
+.close-modal-btn:focus-visible,
+.chat-close-btn:focus-visible {
+    outline: 2px solid #e91e63;
+    outline-offset: 2px;
+}
+
+.pricing-calculator-form input:focus-visible,
+.pricing-calculator-form select:focus-visible,
+.chat-input-area input:focus-visible {
+    outline: 2px solid #e91e63;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* Hide online status indicators and duplicate attachment elements */
+
+/* Hide the agent status indicator created by JavaScript */
+.agent-status-indicator,
+#agent-status-indicator {
+    display: none !important;
+}
+
+/* Hide any status dots */
+.status-dot {
+    display: none !important;
+}
+
+/* Ensure only one attachment button shows */
+.chat-input-area button[title*="file"]:not(#chat-upload-btn),
+.chat-input-area button[title*="Upload"]:not(#chat-upload-btn) {
+    display: none !important;
+}
+
+/* Hide any duplicate paperclip elements */
+.chat-input-area .file-upload-duplicate {
+    display: none !important;
+}

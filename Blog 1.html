@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ultimate Guide for Dutch SMEs: How to Start Automating Your Business in 5 Simple Steps - AutoFlow Studio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/cookies-banner.css">
+    <script src="js/gsap.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo" id="loadingLogo">AutoFlow Studio</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AutoFlow Studio</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <div class="hero-background">
+            <div class="abstract-element sphere-1"></div>
+            <div class="abstract-element sphere-2"></div>
+            <div class="geometric-shapes">
+                <div class="dots-pattern"></div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>AutoFlow Studio Blog</h1>
+            <p>Insights, tips, and strategies to automate your business and boost productivity</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-container">
+        <article class="blog-article">
+            <header class="article-header">
+                <div class="category-badge">Business Guide</div>
+                <h1 class="article-title">The Ultimate Guide for Dutch SMEs: How to Start Automating Your Business in 5 Simple Steps</h1>
+                <p class="article-subtitle">A simple, no-jargon roadmap to help you reclaim your time and free you up to focus on what truly matters for your business growth.</p>
+                <div class="article-meta">
+                    <div class="author">
+                        <div class="author-avatar">AF</div>
+                        <span>AutoFlow Studio</span>
+                    </div>
+                    <span>•</span>
+                    <span>January 15, 2025</span>
+                    <span>•</span>
+                    <span>12 min read</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <div class="hero-image">
+                    [Hero Image: Dutch SME Business Automation Dashboard]
+                </div>
+
+                <p>Are you drowning in a sea of spreadsheets? Do you spend more time on repetitive administrative tasks than on growing the business you're passionate about? If you're a Dutch SME owner, whether you're running a bustling café in Utrecht, a design agency in Eindhoven, or a boutique e-commerce shop from your home in Groningen, the answer is likely a resounding "<em>Ja</em>."</p>
+
+                <p>You didn't start your business to get bogged down by invoicing, manually updating customer lists, or chasing payments. You started it to create, innovate, and serve your customers. But as your business grows, the weight of these manual tasks grows with it, stealing your time and energy.</p>
+
+                <p>What if I told you there's a way to reclaim that time? A way to make your business run smoother, reduce errors, and free you up to focus on what truly matters?</p>
+
+                <p>This is the power of <strong>business automation for small business</strong>. And before you think this is some complex, expensive technology reserved for large corporations, let me stop you. This guide is written for you. It's a simple, no-jargon roadmap to help you take the first, most important steps into the world of automation.</p>
+
+                <p>In the next few minutes, you will learn <strong>how to automate your business processes</strong> in five simple, actionable steps. We will walk you through the entire journey, from identifying your first opportunity to flipping the switch on your new, streamlined workflow.</p>
+
+                <h2>Step 1: The 'Aha!' Moment - Identifying What to Automate</h2>
+                
+                <p>Before you can automate anything, you need to understand where your time is actually going. Many business owners are so used to their daily grind that they don't even see the repetitive tasks anymore. It's time for an 'Automation Audit'.</p>
+
+                <p>Think of your business operations as a series of tasks. Your goal is to find the ones that are:</p>
+
+                <ul>
+                    <li><strong>Repetitive & Frequent:</strong> Things you do over and over again, every day or every week.</li>
+                    <li><strong>Time-Consuming:</strong> Tasks that take up a significant chunk of your day but don't directly generate revenue.</li>
+                    <li><strong>Prone to Human Error:</strong> Any process where a simple typo can cause a major headache. (e.g., entering the wrong IBAN on an invoice).</li>
+                    <li><strong>Rule-Based:</strong> Processes that follow a clear "if this, then that" logic.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h3>💡 Your Action Plan: The 30-Minute Task Audit</h3>
+                    <p>Grab a pen and paper or open a new document. For the next 30 minutes, list every single task you do in a typical day. Be brutally honest. No task is too small. Your list might look something like this:</p>
+                    <ul>
+                        <li>Check email (20 times)</li>
+                        <li>Create and send 3 new invoices</li>
+                        <li>Manually add new leads from a contact form to my CRM</li>
+                        <li>Follow up on 5 unpaid invoices via email</li>
+                        <li>Schedule social media posts for the week</li>
+                        <li>Onboard a new client by sending them a welcome packet and contract</li>
+                        <li>Update project management software with completed tasks</li>
+                    </ul>
+                    <p>Now, look at your list. Circle every task that meets at least two of the criteria above (Repetitive, Time-Consuming, Error-Prone, Rule-Based).</p>
+                </div>
+
+                <p>For a Dutch SME, these are often the prime candidates for your first automation project:</p>
+
+                <ul>
+                    <li><strong>Financial Admin:</strong> Sending invoice reminders, processing expense receipts.</li>
+                    <li><strong>Customer Communication:</strong> Sending welcome emails to new clients, appointment reminders, or follow-up emails after a project is completed.</li>
+                    <li><strong>Marketing:</strong> Posting content to social media channels, adding new subscribers to your newsletter.</li>
+                    <li><strong>Data Entry:</strong> Moving information from one application to another (e.g., from your webshop to your accounting software).</li>
+                </ul>
+
+                <p>This audit is your treasure map. The circled items are X's that mark the spot where automation can save you the most time and money, fast.</p>
+
+                <h2>Step 2: Charting the Course - Documenting Your Workflow</h2>
+
+                <p>You've identified a task. Fantastic! The temptation is to jump right in and find a tool.</p>
+
+                <p>Resist that urge.</p>
+
+                <p>One of the biggest mistakes business owners make is trying to automate a process they don't fully understand. To automate successfully, you must first document the workflow step-by-step, as it exists <em>right now</em>. This vital step ensures you don't miss a crucial detail and helps you see the process with fresh eyes.</p>
+
+                <h3>How to Document Your Workflow (The Simple Way)</h3>
+
+                <p>You don't need fancy software. A simple numbered list is perfect. Let's take the example of "Onboarding a new client."</p>
+
+                <p><strong>Current Manual Workflow: Onboarding Client 'Jansen BV'</strong></p>
+
+                <ol>
+                    <li>Jansen BV signs the digital quote.</li>
+                    <li>I receive a notification.</li>
+                    <li>I manually create a new folder for Jansen BV in Google Drive.</li>
+                    <li>I find the standard welcome email template in a Word document.</li>
+                    <li>I copy and paste the text into a new email.</li>
+                    <li>I customize the email with "Jansen BV" and their project details.</li>
+                    <li>I attach the standard contract PDF and our company's terms and conditions PDF.</li>
+                    <li>I send the email to the main contact at Jansen BV.</li>
+                    <li>I go to our project management tool (e.g., Trello) and manually create a new project board for Jansen BV.</li>
+                    <li>I add the standard checklist of tasks to the board.</li>
+                    <li>I create a new customer profile for Jansen BV in our accounting software.</li>
+                    <li>I set a reminder in my calendar to follow up in 3 days if the contract isn't returned.</li>
+                </ol>
+
+                <p>Look at that. Twelve individual steps for just one part of your business. By mapping it out, you can clearly see every action that an automated system would need to perform. This map will be your guide in the next steps.</p>
+
+                <h2>Step 3: The First Domino - Choosing Your High-Impact Pilot Project</h2>
+
+                <p>You now have a list of potential tasks and a documented workflow for at least one of them. It's time to choose your first "pilot project." This is crucial. A successful first automation will build your confidence and create momentum to tackle more complex processes later.</p>
+
+                <p>Your ideal pilot project should have three qualities:</p>
+
+                <ol>
+                    <li><strong>High-Impact:</strong> It should solve a real, nagging problem. Saving you 3 hours a week is high-impact. Saving you 3 minutes is not (for now).</li>
+                    <li><strong>Low Complexity:</strong> Choose a linear process without too many variables or exceptions. The "Onboarding" example above is good. A process that requires subjective judgment at each step is not.</li>
+                    <li><strong>Low Risk:</strong> Automating a "thank you" email is low-risk. Automating your entire payroll system on day one is high-risk. Start safe.</li>
+                </ol>
+
+                <div class="results-box">
+                    <h3>🎯 Best Pilot Projects for Dutch SMEs</h3>
+                    <p>Based on our experience with <strong>SME automation in the Netherlands</strong>, here are some of the best pilot projects that deliver quick wins:</p>
+                    <ul>
+                        <li><strong>Automated Invoice Reminders:</strong> Automatically send polite follow-up emails for invoices that are 7, 14, and 30 days overdue. This dramatically improves cash flow.</li>
+                        <li><strong>New Lead Welcome Sequence:</strong> When someone fills out the contact form on your website, automatically send them a "thank you" email with information on next steps and add them to your CRM.</li>
+                        <li><strong>Client Onboarding Kickstart:</strong> Triggered by a signed contract, this can automatically create project folders and tasks, as we documented in Step 2.</li>
+                    </ul>
+                </div>
+
+                <p>Choose ONE of these. Just one. Your goal is to knock over the first domino and watch the effect.</p>
+
+                <h2>Step 4: Exploring the Toolbox - Understanding Your Options</h2>
+
+                <p>Now we get to the tools. For many SMEs, the world of automation is dominated by "no-code" or "low-code" platforms.</p>
+
+                <p>Think of these tools as the digital glue that connects the apps you already use. The most common names you'll hear are Zapier and Make (formerly Integromat). They work on a simple "trigger and action" principle: "When THIS happens in App A, do THAT in App B."</p>
+
+                <ul>
+                    <li><strong>Trigger:</strong> A new email arrives in Gmail with the subject "New Lead."</li>
+                    <li><strong>Action:</strong> Create a new card in Trello with the details from that email.</li>
+                </ul>
+
+                <p>For the pilot projects we discussed, these platforms are often a fantastic starting point. They allow you to get a feel for automation without writing a single line of code.</p>
+
+                <div class="highlight-box">
+                    <h3>⚠️ The Crucial Insight</h3>
+                    <p><strong>But here is the crucial insight many guides won't tell you:</strong> These tools have a ceiling.</p>
+                    <p>They are brilliant for simple, linear tasks. But what happens when your business process isn't so simple?</p>
+                    <ul>
+                        <li>What if you need a workflow with multiple complex conditions and branches?</li>
+                        <li>What if you need to connect with a specialized Dutch accounting software that isn't on their list of standard integrations?</li>
+                        <li>What if your process involves transforming data in a very specific way before sending it to the next app?</li>
+                        <li>What if running thousands of these simple automations starts to become surprisingly expensive and difficult to manage?</li>
+                    </ul>
+                </div>
+
+                <p>This is the point where many SMEs hit a wall. They end up with a tangled web of simple automations that are fragile and hard to maintain. This is where looking for a <strong>Zapier alternative</strong> or <strong>n8n alternative</strong> isn't about finding another similar tool, but about upgrading your entire strategy.</p>
+
+                <p>For your pilot project, a tool like Zapier or Make might be perfect. But as you look to the future, remember that a truly streamlined business is often built on more robust, <strong>custom automation solutions</strong>.</p>
+
+                <h2>Step 5: Launch, Learn, and Listen - Implementing and Improving</h2>
+
+                <p>You've chosen your project, documented the workflow, and selected a tool. It's time to build and launch.</p>
+
+                <h3>Your Action Plan: Go Live</h3>
+
+                <ol>
+                    <li><strong>Build It:</strong> Follow the instructions in your chosen tool to connect your apps and set up the trigger and actions based on the workflow you documented in Step 2.</li>
+                    <li><strong>Test It Thoroughly:</strong> Run through the process yourself. Fill out your own contact form. Send a test invoice. Make sure every step works exactly as you intended.</li>
+                    <li><strong>Go Live!</strong> Activate your automation.</li>
+                    <li><strong>Listen and Measure:</strong> For the first week, keep a close eye on it. Did it run correctly? More importantly, measure the impact. How much time did you <em>not</em> spend on that task this week? Celebrate that win!</li>
+                </ol>
+
+                <p>Automation is not a "set it and forget it" magic bullet. It's an iterative process. Your first automation might be 80% perfect. As you use it, you'll find small ways to tweak and improve it. This continuous improvement is the heart of a successful automation culture.</p>
+
+                <h2>What's Next? When to Call in the Experts</h2>
+
+                <p>You've successfully automated your first task. You're saving a few hours a week and your business is running just a little bit smoother. You're starting to see the potential everywhere.</p>
+
+                <p>This is the moment of truth for your SME's growth.</p>
+
+                <p>You'll soon find that your ambition outgrows the capabilities of simple, off-the-shelf tools. The signs are clear:</p>
+
+                <ul>
+                    <li>Your workflows are becoming more complex than just A-to-B.</li>
+                    <li>You're spending time troubleshooting chains of automations that have broken.</li>
+                    <li>You need to connect to systems that don't have a pre-built integration.</li>
+                    <li>You realize that a single, powerful, custom workflow could replace ten smaller, fragile ones.</li>
+                </ul>
+
+                <p>This is the natural evolution. It's the point where you move from simply connecting apps to strategically re-engineering your business processes for maximum efficiency. This is where a dedicated <strong>automation agency</strong> that specializes in custom solutions becomes your most valuable partner. We don't just connect boxes; we analyze your entire business operation and build robust, scalable automation engines tailored specifically to how <em>you</em> work.</p>
+
+                <h2>Your Journey Starts Now</h2>
+
+                <p>We've covered a lot of ground, but the path forward is clear and simple. Let's recap:</p>
+
+                <ol>
+                    <li><strong>Identify:</strong> Find the repetitive, time-sucking tasks that hold you back.</li>
+                    <li><strong>Document:</strong> Map out the exact steps of your current process.</li>
+                    <li><strong>Choose:</strong> Select one high-impact, low-risk pilot project.</li>
+                    <li><strong>Explore:</strong> Start with a simple no-code tool to get a feel for automation.</li>
+                    <li><strong>Implement:</strong> Launch, test, and measure your success.</li>
+                </ol>
+
+                <p>The journey of a thousand miles begins with a single step. Today, you have learned everything you need to take that step. You have the framework to start your <strong>workflow automation for small business</strong> and reclaim your most valuable asset: your time.</p>
+
+                <p>Don't let another week go by bogged down in manual work. The future of your business is one where you are in control, supported by intelligent systems that work for you 24/7.</p>
+
+                <div class="highlight-box">
+                    <h3>🤔 Over to You</h3>
+                    <p><strong>What is the #1 task you identified in Step 1 that you would love to never have to do manually again?</strong></p>
+                    <p>We'd love to hear what your first automation goal is!</p>
+                </div>
+
+                <div class="tag-list">
+                    <span class="tag">Business Automation</span>
+                    <span class="tag">Dutch SME</span>
+                    <span class="tag">Workflow Optimization</span>
+                    <span class="tag">Small Business</span>
+                    <span class="tag">Process Automation</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Call to Action -->
+        <section class="blog-cta-section">
+            <div class="container">
+                <h2>Ready to Move Beyond the Basics?</h2>
+                <p>The five steps in this guide are the perfect start. But when you're ready to build a truly efficient, scalable, and resilient operation, you need a strategic partner.</p>
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" class="cta-button">Book Your Free 30 Minute Automation Audit</a>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <div class="container">
+                <h2 class="section-title">Related Articles</h2>
+                <p class="section-subtitle">Discover more ways to automate your business and boost productivity</p>
+                
+                <div class="related-articles-grid">
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            🇳🇱
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Netherlands</span>
+                            </div>
+                            <h3>Dutch Tax Software Integration: Automating Your BTW Administration</h3>
+                            <p>Complete guide to connecting your business automation with Dutch accounting software like Exact Online, AFAS, and Twinfield for seamless tax compliance.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">January 12, 2025</span>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            💰
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Cash Flow</span>
+                            </div>
+                            <h3>Automated Invoice Reminders: How Dutch SMEs Improved Cash Flow by 40%</h3>
+                            <p>Real case studies from Amsterdam to Maastricht showing how automated payment reminders transformed SME cash flow management and reduced late payments.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">January 10, 2025</span>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            🛠️
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-tag">Implementation</span>
+                            </div>
+                            <h3>Beyond Zapier: When Dutch SMEs Need Custom Automation Solutions</h3>
+                            <p>Understanding the limitations of off-the-shelf tools and recognizing when your growing business needs purpose-built automation systems.</p>
+                            <div class="blog-footer">
+                                <span class="blog-date">January 8, 2025</span>
+                                <a href="#" class="read-more">Read More →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+    <div class="footer-content">
+        <!-- Company Branding -->
+        <div class="footer-branding">
+            <h3>AutoFlow Studio</h3>
+            <p class="footer-description">
+                Building automation solutions that save time and eliminate manual work. Connect with us and stay updated on the latest automation insights.
+            </p>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social-section">
+            <h4>Follow Us</h4>
+            <div class="footer-social-links">
+                <a href="https://www.instagram.com/auto.flow25" class="footer-social-link" title="Instagram" target="_blank">
+                    <img src="https://i.ibb.co/67KTsBBp/instagram-1384015.png" alt="Instagram">
+                </a>
+                <a href="#" class="footer-social-link" title="TikTok" target="_blank">
+                    <img src="https://i.ibb.co/LzmHMXNb/tiktok-3116491.png" alt="TikTok">
+                </a>
+                <a href="#" class="footer-social-link" title="YouTube" target="_blank">
+                    <img src="https://i.ibb.co/9jbRt6k/youtube-1384012.png" alt="YouTube">
+                </a>
+                <a href="#" class="footer-social-link" title="LinkedIn" target="_blank">
+                    <img src="https://i.ibb.co/RknLHqpx/linkedin-1384014.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="footer-navigation">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 AutoFlow Studio. All rights reserved. | autoflowcompany2025@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Tools FAB -->
+    <div id="tools-fab-container" class="tools-fab-container">
+        <div id="tools-menu" class="tools-menu">
+            <div class="tool-item" id="open-calculator-btn">
+                <div class="tool-label">Price Calculator</div>
+                <div class="tool-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="12" y1="10" x2="12" y2="18"></line><line x1="8" y1="14" x2="16" y2="14"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="tool-item" id="open-chatbot-btn">
+                <div class="tool-label">AI Assistant</div>
+                <div class="tool-icon tool-icon-text">
+                    Ai
+                </div>
+            </div>
+        </div>
+        <div id="main-fab" class="fab-icon">
+            <svg id="tools-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+               <line x1="12" y1="19" x2="12" y2="19.01"></line>
+            </svg>
+            
+            <svg id="close-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M18 6l-12 12"></path>
+               <path d="M6 6l12 12"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Calculator Modal -->
+    <div id="calculator-modal-overlay" class="calculator-modal-overlay">
+        <div id="calculator-modal" class="calculator-modal">
+            
+            <!-- Close Button -->
+            <button id="close-calculator-modal-btn" class="close-modal-btn">&times;</button>
+            
+            <h2 style="font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; text-align: center; padding: 0 15px;">Automation Price Estimator</h2>
+            
+            <p style="color: #6b7280; font-size: 0.85rem; text-align: center; margin: 0 auto 25px auto; line-height: 1.4; max-width: 450px; padding: 0 15px;">Select your options to get a real-time price estimate for your custom automation project.</p>
+
+            <form id="pricing-calculator-form" class="pricing-calculator-form">
+                <!-- Two column layout for main options -->
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Team Size</label>
+                        <div class="custom-select">
+                            <select id="team-size" name="team-size">
+                                <option value="solo">Small (1-5 people)</option>
+                                <option value="growing">Medium (6-25 people)</option>
+                                <option value="established">Large (26-99 people)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Number of Tasks
+                            <span class="tasks-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>What counts as one task?</strong><br><br>
+                                    • <strong>One automation workflow</strong> that solves a specific business problem<br><br>
+                                    • Examples: "Send email when form submitted", "Update spreadsheet when sale made", "Create calendar event from email"<br><br>
+                                    • Each separate automation = 1 task
+                                </div>
+                            </span>
+                        </label>
+                        <input type="number" id="num-tasks" name="num-tasks" value="1" min="1" max="10" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 0.9rem; background: #f8fafc; color: #374151;">
+                    </div>
+                </div>
+                
+                <!-- Add-ons section -->
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin: 0 0 15px 0;">Add-ons</h3>
+                
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Task Complexity
+                            <span class="complexity-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>Simple Syncs (€100 per task):</strong> Basic data transfer between two apps (e.g., Gmail to Google Sheets).<br><br>
+                                    <strong>Smart Workflows (€250 per task):</strong> Involves AI, data processing, or conditional logic.<br><br>
+                                    <strong>Advanced Solutions (€400 per task):</strong> Involves web scraping, custom API integrations, or complex data manipulation.
+                                </div>
+                            </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="task-complexity" name="task-complexity">
+                                <option value="simple">Simple Syncs</option>
+                                <option value="smart">Smart Workflows</option>
+                                <option value="advanced">Advanced Solutions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Management Controls</label>
+                        <div class="custom-select">
+                            <select id="management-option" name="management-option">
+                                <option value="background">None (runs automatically)</option>
+                                <option value="sheets-controls">Google Sheets dashboard</option>
+                                <option value="custom-dashboard">Custom dashboard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Support Checkbox -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display: flex; align-items: center; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; cursor: pointer;">
+                        <input type="checkbox" id="support-plan" name="support-plan" style="width: 18px; height: 18px; margin-right: 10px; accent-color: #e91e63;">
+                        Monthly support
+                    </label>
+                </div>
+            </form>
+
+            <!-- Results Section -->
+            <div class="mobile-results" style="background: linear-gradient(135deg, #fce4ec, #f3e5f5); padding: 15px; border-radius: 15px; text-align: center;">
+                <div style="color: #9ca3af; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED TOTAL</div>
+                
+                <div id="one-time-price" class="mobile-price" style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #e91e63, #9c27b0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; line-height: 1;">€100</div>
+                
+                <div style="color: #6b7280; font-size: 0.8rem; margin-bottom: 6px;">(One-Time Project Cost)</div>
+                
+                <!-- Monthly price (hidden by default) -->
+                <div id="monthly-price-container" style="display: none; margin-bottom: 12px;">
+                    <div style="font-size: 1rem; color: #6b7280; margin: 6px 0;">+</div>
+                    <div id="monthly-price" style="font-size: 1.5rem; font-weight: bold; color: #e91e63; margin-bottom: 3px;">€50 / month</div>
+                    <div style="color: #6b7280; font-size: 0.8rem;">(Monthly Support Plan)</div>
+                </div>
+                
+                <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.4; margin: 0 0 15px 0; max-width: 350px; margin-left: auto; margin-right: auto; padding: 0 8px;">This is a rough approximation. The final price may increase or decrease based on your specific requirements.</p>
+                
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" id="proceed-button" style="display: inline-block; background: linear-gradient(135deg, #e91e63, #9c27b0); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3); border: none; cursor: pointer; max-width: 100%; box-sizing: border-box;">Schedule a free consultation</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- AI Chat Bot Modal -->
+<div id="chatbot-modal-overlay" class="chat-modal-overlay">
+    <div id="chatbot-modal" class="chat-modal">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-bot-avatar">🤖</div>
+                <div class="chat-header-text">
+                    <h3>AI Assistant</h3>
+                    <p>AutoFlow Studio Bot</p>
+                </div>
+            </div>
+            <button id="close-chatbot-modal-btn" class="chat-close-btn">&times;</button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages">
+                <div class="message received">
+                    <p>Hello! How can I help you with your automation needs today?</p>
+                </div>
+            </div>
+            
+            <!-- Chat Input Area with SINGLE attachment button -->
+            <div class="chat-input-area">
+                <button id="chat-upload-btn" title="Upload file">📎</button>
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message...">
+                </div>
+                <button class="chat-send-btn" title="Send message">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/cookies-banner.js"></script>
+</body>
+</html>

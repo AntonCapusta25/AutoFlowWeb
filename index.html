@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript"> (function(c,l,a,r,i,t,y){ c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)}; t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i; y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y); })(window, document, "clarity", "script", "sc7rg8deco"); </script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFlow Studio - Automate the Work You Hate</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script> 
+    <script src="js/gsap.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/cookies-banner.css">
+    
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-logo" id="loadingLogo">AutoFlow Studio</div>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AutoFlow Studio</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+       <section class="hero">
+            <div class="hero-background">
+                <!-- Abstract 3D Elements -->
+                <div class="abstract-element sphere-1"></div>
+                <div class="abstract-element sphere-2"></div>
+                <div class="abstract-element sphere-3"></div>
+                <div class="abstract-element sphere-4"></div>
+                
+                <!-- Geometric Shapes -->
+                <div class="geometric-shapes">
+                    <div class="dots-pattern"></div>
+                    <div class="wavy-line"></div>
+                    <div class="circle-outline"></div>
+                    <div class="dots-cluster"></div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1>Automate the Work You Hate</h1>
+                <p>Custom automation tools for startups, founders, and teams. Delivered in under 7 days.</p>
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" class="cta-button">Book a Free Automation Audit</a>
+            </div>
+            
+            <!-- ADDED: Animated Scroll Down Arrow -->
+            <div class="scroll-down-arrow" id="scrollDownArrow">
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add ID to the next section for smooth scrolling -->
+        <section class="section" id="what-we-build">
+            <div class="container">
+                <h2 class="section-title">What We Build</h2>
+                <p class="section-subtitle">From Google Sheets workflows to AI-powered chatbots, we create automation tools that save you hours every week.</p>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">SH</div>
+                        <h3>Google Sheets Automation</h3>
+                        <p>Transform your spreadsheets into powerful databases with automated workflows, data sync, and custom functions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">AI</div>
+                        <h3>AI Chatbots</h3>
+                        <p>Custom GPT-powered chatbots for customer support, lead qualification, and internal knowledge bases.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">AU</div>
+                        <h3>Process Automation</h3>
+                        <p>Eliminate manual tasks with smart workflows that connect your tools and automate repetitive processes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="work-examples">
+    <div class="container">
+        <h2 class="section-title">Real Results from Real Projects</h2>
+        <p class="section-subtitle">See how our automation solutions have transformed businesses with measurable results and proven ROI across different industries.</p>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- SLIDE 1: ACTUAL VIDEO -->
+                <div class="carousel-slide">
+                    <div class="video-container">
+                        <div class="video-wrapper" id="video-wrapper-enhancer">
+                            <!-- The actual video -->
+                            <video 
+                                id="enhancer-video"
+                                preload="metadata"
+                                style="width: 100%; height: 300px; border-radius: 15px; object-fit: cover;"
+                            >
+                                <source src="Assets/enhancer.mp4" type="video/mp4">
+                                <!-- Fallback content -->
+                                <div class="video-fallback">
+                                    <p style="color: #6b7280; text-align: center; padding: 20px;">
+                                        Your browser doesn't support video playback. 
+                                        <a href="Assets/enhancer.mp4" target="_blank" style="color: #e91e63;">
+                                            Click here to download the video.
+                                        </a>
+                                    </p>
+                                </div>
+                            </video>
+                            
+                            <!-- Play button overlay (REMOVED onclick) -->
+                            <div class="video-overlay">
+                                <div class="play-button">▶</div>
+                            </div>
+                            
+                            <!-- Pause button (REMOVED onclick) -->
+                            <div class="video-controls">
+                                <button class="pause-button">⏸</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Video title and description OUTSIDE video wrapper -->
+                        <div class="video-title">Custom Photo Improvement Tool</div>
+                        <div class="video-description">Automated photo enhancement tool ensuring every chef's dish looks magazine-ready on the platform.</div>
+                    </div>
+                    
+                    <div class="work-content">
+                        <h2>Visual Consistency Revolution</h2>
+                        <p>Transformed inconsistent, low-quality homemade food photos into professional, appealing images, making the platform visually competitive and trustworthy.</p>
+                        <div class="work-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">20</div>
+                                <div class="stat-label">Hours Saved Weekly</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5X</div>
+                                <div class="stat-label">Faster Onboarding</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Minutes Processing</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">€45k</div>
+                                <div class="stat-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <a href="project1.html" class="cta-button">View Case Study</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2: VIDEO PLACEHOLDER -->
+                <div class="carousel-slide">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-title">AI-Powered Personalized Email Automation</div>
+                        <div class="video-description">AI-powered system generating thousands of personalized, human-sounding emails for efficient outreach.</div>
+                    </div>
+                    <div class="work-content">
+                        <h2>Hyper-Personalized Outreach Engine</h2>
+                        <p>Automated the creation of highly personalized sales emails, enabling massive outreach volume while retaining the crucial human touch.</p>
+                        <div class="work-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">10X</div>
+                                <div class="stat-label">Outreach Volume</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">95%</div>
+                                <div class="stat-label">Personalization Score</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Hours Saved Daily</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">€60K+</div>
+                                <div class="stat-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <a href="Project4.html" class="cta-button">View Case Study</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3: VIDEO PLACEHOLDER -->
+                <div class="carousel-slide">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-title">AI-Powered Chatbot with Real-Time Telegram Integration</div>
+                        <div class="video-description">AI-powered chatbot providing instant 24/7 customer support directly via Telegram, connected to live data.</div>
+                    </div>
+                    <div class="work-content">
+                        <h2>24/7 Instant Customer Support</h2>
+                        <p>Designed an intelligent chatbot with real-time Telegram integration that instantly answers customer queries, reducing support load and improving satisfaction.</p>
+                        <div class="work-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">70%</div>
+                                <div class="stat-label">Inquiries Automated</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">Real-time</div>
+                                <div class="stat-label">Answers</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">35</div>
+                                <div class="stat-label">Hours Saved Weekly</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">€40K+</div>
+                                <div class="stat-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <a href="project2.html" class="cta-button">View Case Study</a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4: VIDEO PLACEHOLDER -->
+                <div class="carousel-slide">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="video-title">Data Goldmine Automation</div>
+                        <div class="video-description">Automated lead generation engine precisely scraping and enriching prospect data from diverse online sources.</div>
+                    </div>
+                    <div class="work-content">
+                        <h2>AI-Powered Precision Lead Scraping</h2>
+                        <p>Automated lead qualification system that scores prospects, sends personalized follow-ups, and routes high-value leads directly to sales team.</p>
+                        <div class="work-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">5-7X</div>
+                                <div class="stat-label">Lead Volume</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">30</div>
+                                <div class="stat-label">Hours Saved Weekly</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">Lead Quality Score</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">€55K+</div>
+                                <div class="stat-label">Annual Savings</div>
+                            </div>
+                        </div>
+                        <a href="Project3.html" class="cta-button">View Case Study</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel timer -->
+            <div class="carousel-timer">
+                <div class="timer-progress" id="timerProgress"></div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <div class="carousel-controls">
+            <button class="carousel-button" id="prevBtn">‹</button>
+            <div class="carousel-indicators" id="indicators"></div>
+            <button class="carousel-button" id="nextBtn">›</button>
+        </div>
+    </div>
+</section>
+
+        <section class="section" style="background: linear-gradient(135deg, #f8faff 0%, #e6f3ff 100%);">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple, fast, and effective. Get your automation up and running in three easy steps.</p>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Audit & Strategy</h3>
+                        <p>We analyze your current workflows and identify the best automation opportunities for maximum impact.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Build & Test</h3>
+                        <p>Our team builds your custom automation using proven tools and thoroughly tests everything before delivery.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Deploy & Support</h3>
+                        <p>We deploy your automation and provide training and ongoing support to ensure smooth operation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"AutoFlow Studio automated our entire order processing workflow. What used to take our team 3 hours daily now happens automatically in minutes."</p>
+                        <div class="testimonial-author">Sarah Chen, E-commerce Founder</div>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The Google Sheets automation they built saves us 15 hours per week. The ROI was immediate and the support has been fantastic."</p>
+                        <div class="testimonial-author">Marcus Rodriguez, Operations Manager</div>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Finally, someone who understands both the technical side and business needs. They delivered exactly what we needed, on time."</p>
+                        <div class="testimonial-author">Lisa Park, Startup Founder</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <!-- Company Branding -->
+        <div class="footer-branding">
+            <h3>AutoFlow Studio</h3>
+            <p class="footer-description">
+                Building automation solutions that save time and eliminate manual work. Connect with us and stay updated on the latest automation insights.
+            </p>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="footer-social-section">
+            <h4>Follow Us</h4>
+            <div class="footer-social-links">
+                <a href="https://www.instagram.com/auto.flow25" class="footer-social-link" title="Instagram" target="_blank">
+                    <img src="https://i.ibb.co/67KTsBBp/instagram-1384015.png" alt="Instagram">
+                </a>
+                <a href="#" class="footer-social-link" title="TikTok" target="_blank">
+                    <img src="https://i.ibb.co/LzmHMXNb/tiktok-3116491.png" alt="TikTok">
+                </a>
+                <a href="#" class="footer-social-link" title="YouTube" target="_blank">
+                    <img src="https://i.ibb.co/9jbRt6k/youtube-1384012.png" alt="YouTube">
+                </a>
+                <a href="#" class="footer-social-link" title="LinkedIn" target="_blank">
+                    <img src="https://i.ibb.co/RknLHqpx/linkedin-1384014.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="footer-navigation">
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 AutoFlow Studio. All rights reserved. | autoflowcompany2025@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Tools FAB -->
+    <div id="tools-fab-container" class="tools-fab-container">
+        <div id="tools-menu" class="tools-menu">
+            <div class="tool-item" id="open-calculator-btn">
+                <div class="tool-label">Price Calculator</div>
+                <div class="tool-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="12" y1="10" x2="12" y2="18"></line><line x1="8" y1="14" x2="16" y2="14"></line>
+                    </svg>
+                </div>
+            </div>
+            <div class="tool-item" id="open-chatbot-btn">
+                <div class="tool-label">AI Assistant</div>
+                <div class="tool-icon tool-icon-text">
+                    Ai
+                </div>
+            </div>
+        </div>
+        <div id="main-fab" class="fab-icon">
+            <svg id="tools-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4"></path>
+               <line x1="12" y1="19" x2="12" y2="19.01"></line>
+            </svg>
+            
+            <svg id="close-icon" class="main-fab-icon" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+               <path d="M18 6l-12 12"></path>
+               <path d="M6 6l12 12"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Calculator Modal -->
+    <div id="calculator-modal-overlay" class="calculator-modal-overlay">
+        <div id="calculator-modal" class="calculator-modal">
+            
+            <!-- Close Button -->
+            <button id="close-calculator-modal-btn" class="close-modal-btn">&times;</button>
+            
+            <h2 style="font-size: 2rem; font-weight: 800; color: #1a1a1a; margin: 0 0 15px 0; text-align: center; padding: 0 15px;">Automation Price Estimator</h2>
+            
+            <p style="color: #6b7280; font-size: 0.85rem; text-align: center; margin: 0 auto 25px auto; line-height: 1.4; max-width: 450px; padding: 0 15px;">Select your options to get a real-time price estimate for your custom automation project.</p>
+
+            <form id="pricing-calculator-form" class="pricing-calculator-form">
+                <!-- Two column layout for main options -->
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Team Size</label>
+                        <div class="custom-select">
+                            <select id="team-size" name="team-size">
+                                <option value="solo">Small (1-5 people)</option>
+                                <option value="growing">Medium (6-25 people)</option>
+                                <option value="established">Large (26-99 people)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Number of Tasks
+                            <span class="tasks-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>What counts as one task?</strong><br><br>
+                                    • <strong>One automation workflow</strong> that solves a specific business problem<br><br>
+                                    • Examples: "Send email when form submitted", "Update spreadsheet when sale made", "Create calendar event from email"<br><br>
+                                    • Each separate automation = 1 task
+                                </div>
+                            </span>
+                        </label>
+                        <input type="number" id="num-tasks" name="num-tasks" value="1" min="1" max="10" style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 0.9rem; background: #f8fafc; color: #374151;">
+                    </div>
+                </div>
+                
+                <!-- Add-ons section -->
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: #1a1a1a; margin: 0 0 15px 0;">Add-ons</h3>
+                
+                <div class="mobile-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">
+                            Task Complexity
+                            <span class="complexity-tooltip tooltip-icon">?
+                                <div class="tooltip-content">
+                                    <strong>Simple Syncs (€100 per task):</strong> Basic data transfer between two apps (e.g., Gmail to Google Sheets).<br><br>
+                                    <strong>Smart Workflows (€250 per task):</strong> Involves AI, data processing, or conditional logic.<br><br>
+                                    <strong>Advanced Solutions (€400 per task):</strong> Involves web scraping, custom API integrations, or complex data manipulation.
+                                </div>
+                            </span>
+                        </label>
+                        <div class="custom-select">
+                            <select id="task-complexity" name="task-complexity">
+                                <option value="simple">Simple Syncs</option>
+                                <option value="smart">Smart Workflows</option>
+                                <option value="advanced">Advanced Solutions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 8px;">Management Controls</label>
+                        <div class="custom-select">
+                            <select id="management-option" name="management-option">
+                                <option value="background">None (runs automatically)</option>
+                                <option value="sheets-controls">Google Sheets dashboard</option>
+                                <option value="custom-dashboard">Custom dashboard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monthly Support Checkbox -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display: flex; align-items: center; font-size: 0.95rem; font-weight: 600; color: #1a1a1a; cursor: pointer;">
+                        <input type="checkbox" id="support-plan" name="support-plan" style="width: 18px; height: 18px; margin-right: 10px; accent-color: #e91e63;">
+                        Monthly support
+                    </label>
+                </div>
+            </form>
+
+            <!-- Results Section -->
+            <div class="mobile-results" style="background: linear-gradient(135deg, #fce4ec, #f3e5f5); padding: 15px; border-radius: 15px; text-align: center;">
+                <div style="color: #9ca3af; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px;">ESTIMATED TOTAL</div>
+                
+                <div id="one-time-price" class="mobile-price" style="font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #e91e63, #9c27b0); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 6px; line-height: 1;">€100</div>
+                
+                <div style="color: #6b7280; font-size: 0.8rem; margin-bottom: 6px;">(One-Time Project Cost)</div>
+                
+                <!-- Monthly price (hidden by default) -->
+                <div id="monthly-price-container" style="display: none; margin-bottom: 12px;">
+                    <div style="font-size: 1rem; color: #6b7280; margin: 6px 0;">+</div>
+                    <div id="monthly-price" style="font-size: 1.5rem; font-weight: bold; color: #e91e63; margin-bottom: 3px;">€50 / month</div>
+                    <div style="color: #6b7280; font-size: 0.8rem;">(Monthly Support Plan)</div>
+                </div>
+                
+                <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.4; margin: 0 0 15px 0; max-width: 350px; margin-left: auto; margin-right: auto; padding: 0 8px;">This is a rough approximation. The final price may increase or decrease based on your specific requirements.</p>
+                
+                <a href="https://autoflow.neetocal.com/meeting-with-auto-flow" target="_blank" id="proceed-button" style="display: inline-block; background: linear-gradient(135deg, #e91e63, #9c27b0); color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3); border: none; cursor: pointer; max-width: 100%; box-sizing: border-box;">Schedule a free consultation</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Chat Bot Modal -->
+<div id="chatbot-modal-overlay" class="chat-modal-overlay">
+    <div id="chatbot-modal" class="chat-modal">
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-bot-avatar">🤖</div>
+                <div class="chat-header-text">
+                    <h3>AI Assistant</h3>
+                    <p>AutoFlow Studio Bot</p>
+                </div>
+            </div>
+            <button id="close-chatbot-modal-btn" class="chat-close-btn">&times;</button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="chat-container">
+            <div class="chat-messages">
+                <div class="message received">
+                    <p>Hello! How can I help you with your automation needs today?</p>
+                </div>
+            </div>
+            
+            <!-- Chat Input Area with SINGLE attachment button -->
+            <div class="chat-input-area">
+                <button id="chat-upload-btn" title="Upload file">📎</button>
+                <div class="chat-input-container">
+                    <input type="text" id="chat-input" placeholder="Type your message...">
+                </div>
+                <button class="chat-send-btn" title="Send message">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/cookies-banner.js"></script>
+</body>
+</html>
