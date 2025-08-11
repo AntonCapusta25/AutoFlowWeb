@@ -1,5 +1,5 @@
-// smooth-scroll.js
-// Dedicated module for handling smooth chat scrolling with GSAP.
+// smooth-scroll.js - REALLY SLOW SCROLL VERSION
+// Dedicated module for handling very slow, gentle chat scrolling with GSAP.
 
 (function() {
     // Wait for GSAP to be available
@@ -12,7 +12,7 @@
     gsap.registerPlugin(ScrollToPlugin);
 
     /**
-     * A robust, GSAP-powered function to smoothly scroll an element to the bottom.
+     * A very slow, gentle GSAP-powered function to scroll an element to the bottom.
      * @param {HTMLElement} element - The scrollable element (e.g., your chat messages container).
      */
     function smoothScrollToBottom(element) {
@@ -21,20 +21,20 @@
             return;
         }
 
-        // Use GSAP for a guaranteed smooth scroll
+        // Use GSAP for a very slow, gentle scroll
         gsap.to(element, {
-            duration: 0.5, // Animation duration in seconds
+            duration: 2.0, // INCREASED from 0.5 to 2.0 seconds - very slow
             scrollTo: {
                 y: "max", // Scrolls to the maximum vertical position
                 autoKill: true // Stops the animation if the user scrolls manually
             },
-            ease: "power2.out" // An easing function for a natural feel
+            ease: "power1.inOut" // Gentle ease in and out for smooth, slow movement
         });
     }
 
     // Attach the function to the global window object to make it accessible from tools.js
     window.smoothScrollToBottom = smoothScrollToBottom;
 
-    console.log('✅ Smooth Scroll module loaded successfully.');
+    console.log('✅ Really Slow Scroll module loaded successfully.');
 
 })();
