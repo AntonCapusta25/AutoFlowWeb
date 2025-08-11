@@ -1032,7 +1032,7 @@ function addButtons(buttons, currentStep = null) {
     
     buttonContainer.appendChild(humanBtn);
     chatMessages.appendChild(buttonContainer);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    window.smoothScrollToBottom(chatMessages);
         console.log('✅ Enhanced chatbot initialization complete');
     
     // Make AI functions globally available for testing
